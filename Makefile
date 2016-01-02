@@ -1,6 +1,7 @@
 
 CC = gcc
 CFLAGS = -g -Wall -O2
+SRC = ./src/
 
 compile: y.tab.c lex.yy.c typecheckfuncs.h header.h parsetreefuncs.h codegenfuncs.h
 	$(CC) $(CFLAGS) lex.yy.c y.tab.c -o compile
