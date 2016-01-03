@@ -78,7 +78,8 @@ int writeVariable(char *name, int registerNum) {
   } else if (getNearest(name) != NULL) { // we have a variable
     printf("lw\t$t%d, %s\t# load the ram destination\n", registerNum, getVariableName(name));
   } else { // we have a char literal
-    printf("lb\t$t%d, %s\t# load the char literal\n", registerNum, name);
+    //printf("lb\t$t%d, %s\t# load the char literal\n", registerNum, name);
+    printf("lw\t$t%d, %s\t# load the char literal\n", registerNum, name);
   }
   return -1;
 }
